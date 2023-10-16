@@ -8,4 +8,15 @@ window.onload = async () => {
       console.log(header);
       header.innerText = "Hello, this is from sense on page load";
     }
+
+    // listening to the message
+    chrome.runtime.onMessage.addListener((message) => {
+        const header = document.querySelector("h1");
+  
+        console.log("Inside the content file");
+        if (header) {
+          console.log(header);
+          header.innerText = message.text;
+        }
+    })
 }
