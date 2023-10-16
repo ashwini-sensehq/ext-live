@@ -35,6 +35,10 @@ window.onload = async () => {
 
       // text selection
   window.addEventListener("mouseup", (e) => {
-    chrome.action.setBadgeText({ text: message.tagName });
+    chrome.runtime.sendMessage({
+      type: "UPDATE_BADGE",
+      text: e.target.innerText,
+      tagName: e.target.tagName,
+    });
   });
 }
