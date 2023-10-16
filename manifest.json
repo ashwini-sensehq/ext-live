@@ -1,5 +1,16 @@
 {
     "manifest_version": 3,
     "name": "Sense Talk Extension",
-    "version": "1.0.0"
+    "description": "sense ext desc",
+    "version": "1.0.0",
+    "action": {
+        "default_icon": {
+            "16": "icons/iconx16.png",
+            "32": "icons/iconx32.png",
+            "48": "icons/iconx48.png",
+            "128": "icons/iconx128.png",
+            "256": "icons/iconx256.png",
+            "512": "icons/iconx512.png"
+        }
+    }
 }
