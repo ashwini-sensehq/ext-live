@@ -19,6 +19,7 @@
             "128": "icons/iconx128.png",
             "256": "icons/iconx256.png",
             "512": "icons/iconx512.png"
-        }
+        },
+        "default_popup": "popup/popup.html"
     }
 }
