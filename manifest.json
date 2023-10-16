@@ -28,7 +28,7 @@
           "matches": ["<all_urls>"]
         }
     ],
-    "permissions": ["tabs"],
+    "permissions": ["tabs", "storage"],
     "background": {
         "service_worker": "service-worker.js"
     },
@@ -37,5 +37,8 @@
             "resources": ["icons/*"],
             "matches": ["<all_urls>"]
         }
-      ] 
+    ],
+    "options_ui": {
+        "page": "options/options.html"
+    }
 }

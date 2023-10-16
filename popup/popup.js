@@ -40,4 +40,9 @@ window.onload = async () => {
     });
   });
 
+  // options customization
+  chrome.storage.local.get({ favoriteColor: "red" }, (items) => {
+    updateTitleButton.style.backgroundColor = items.favoriteColor;
+  });
+
 };
