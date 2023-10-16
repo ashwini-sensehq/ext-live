@@ -7,7 +7,13 @@ window.onload = async () => {
   updateTitleButton.addEventListener("click", () => {
 
     // logic to update the title
-
+    chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+        var activeTab = tabs[0];
+        chrome.tabs.sendMessage(activeTab.id, {
+          type: "UPDATE_TITLE",
+          text: titleText.value,
+        });
+      });
 
   });
 
