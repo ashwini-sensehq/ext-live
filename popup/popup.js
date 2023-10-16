@@ -10,10 +10,23 @@ window.onload = async () => {
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         var activeTab = tabs[0];
         chrome.tabs.sendMessage(activeTab.id, {
+          type: "UPDATE_TITLE",
           text: titleText.value,
         });
       });
-
   });
+
+    // update desc
+    const updateDescButton = document.getElementById("updateDesc");
+    const descText = document.getElementById("descText");
+    updateDescButton.addEventListener("click", () => {
+      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+        var activeTab = tabs[0];
+        chrome.tabs.sendMessage(activeTab.id, {
+          type: "UPDATE_DESCRIPTION",
+          text: descText.value,
+        });
+      });
+    });
 
 };

@@ -11,6 +11,7 @@ window.onload = async () => {
 
     // listening to the message
     chrome.runtime.onMessage.addListener((message) => {
+      if (message.type === "UPDATE_TITLE") {
         const header = document.querySelector("h1");
   
         console.log("Inside the content file");
@@ -18,5 +19,16 @@ window.onload = async () => {
           console.log(header);
           header.innerText = message.text;
         }
+      }
+      if (message.type === "UPDATE_DESCRIPTION") {
+        const header2 = document.querySelector("h2");
+  
+        console.log("Inside the content file");
+        if (header2) {
+          console.log(header2);
+          header2.innerText = message.text;
+        }
+      }
+
     })
 }
