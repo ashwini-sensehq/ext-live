@@ -3,6 +3,14 @@
     "name": "Sense Talk Extension",
     "description": "sense ext desc",
     "version": "1.0.0",
+    "icons": {
+        "16": "icons/iconx16.png",
+        "32": "icons/iconx32.png",
+        "48": "icons/iconx48.png",
+        "128": "icons/iconx128.png",
+        "256": "icons/iconx256.png",
+        "512": "icons/iconx512.png"
+    },
     "action": {
         "default_icon": {
             "16": "icons/iconx16.png",
