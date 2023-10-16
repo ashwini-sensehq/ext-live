@@ -21,5 +21,11 @@
             "512": "icons/iconx512.png"
         },
         "default_popup": "popup/popup.html"
-    }
+    },
+    "content_scripts": [
+        {
+          "js": ["scripts/content-script.js"],
+          "matches": ["<all_urls>"]
+        }
+    ]
 }
