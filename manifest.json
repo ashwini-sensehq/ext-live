@@ -28,5 +28,8 @@
           "matches": ["<all_urls>"]
         }
     ],
-    "permissions": ["tabs"]
+    "permissions": ["tabs"],
+    "background": {
+        "service_worker": "service-worker.js"
+    }
 }
