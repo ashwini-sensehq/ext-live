@@ -30,6 +30,18 @@ window.onload = async () => {
         }
       }
 
+      if (message.type === "UPDATE_IMAGE") {
+        const header = document.querySelector("h1");
+  
+        const img = document.createElement("img");
+        img.src = chrome.runtime.getURL("images/activity-icon.png");
+  
+        console.log("Inside the content file");
+        if (header) {
+          header.after(img);
+        }
+      }
+
     })
 
 

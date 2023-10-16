@@ -29,4 +29,15 @@ window.onload = async () => {
       });
     });
 
+  // update image
+  const updateImgButton = document.getElementById("updateImg");
+  updateImgButton.addEventListener("click", () => {
+    chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+      var activeTab = tabs[0];
+      chrome.tabs.sendMessage(activeTab.id, {
+        type: "UPDATE_IMAGE",
+      });
+    });
+  });
+
 };
